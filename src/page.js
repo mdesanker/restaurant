@@ -1,38 +1,48 @@
+import { generateHome } from "./home";
+
 // Generate header
 function generateHeader() {
-  console.log('Generate header runnning')
-  const header = document.createElement('header');
-  
-  const name = document.createElement('h1');
-  name.textContent = 'Feast';
-  name.classList.add('name');
+  const header = document.createElement("header");
+
+  const name = document.createElement("h1");
+  name.textContent = "Feast";
+  name.classList.add("name");
 
   header.appendChild(name);
-  console.log(header)
   header.appendChild(generateNav());
 
   return header;
-};
+}
 
 // Generate navbar
-function generateNav () {
-  const nav = document.createElement('nav');
+function generateNav() {
+  const nav = document.createElement("nav");
 
-  const navList = ['home', 'menu', 'contact'];
+  const navList = ["home", "menu", "contact"];
 
-  navList.forEach(item => {
-    const button = document.createElement('button');
-    button.classList.add('nav-btn');
-    button.textContent = button.id = item;
-    button.setAttribute('type', 'button');
+  navList.forEach((item) => {
+    const button = document.createElement("button");
+    button.classList.add("nav-btn");
+    button.textContent = item;
+    button.id = `${item}Btn`;
+    button.setAttribute("type", "button");
+
+    // Add eventListener to each button
+    button.addEventListener("click", function (e) {
+      // Doesn't do anything yet
+      console.log(e.target.id);
+    });
+
     nav.append(button);
-  })
+  });
 
   return nav;
 }
 
-export function initializeWebsite() {
-  const content = document.querySelector('#content');
-
-  content.appendChild(generateHeader());
+function initializeWebsite() {
+  const content = document.querySelector("#content");
+  content.prepend(generateHeader());
+  // content.appendChild(generateHome());
 }
+
+export { initializeWebsite };
