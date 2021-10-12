@@ -1,3 +1,4 @@
 import './style.css';
+import {initializeWebsite} from "./page";
 
-console.log('Test');
+initializeWebsite();
