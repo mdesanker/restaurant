@@ -17,21 +17,16 @@ function generateHeader() {
 // Generate navbar
 function generateNav () {
   const nav = document.createElement('nav');
-  const list = document.createElement('ul');
 
-  const menuItems = ['home', 'menu', 'contact'];
+  const navList = ['home', 'menu', 'contact'];
 
-  menuItems.forEach(item => {
-    const listItem = document.createElement('li');
-    const listLink = document.createElement('a');
-    listLink.textContent = item;
-    listLink.setAttribute('href', `#${item}`);
-    listItem.appendChild(listLink);
-    list.appendChild(listItem);
+  navList.forEach(item => {
+    const button = document.createElement('button');
+    button.classList.add('nav-btn');
+    button.textContent = button.id = item;
+    button.setAttribute('type', 'button');
+    nav.append(button);
   })
-  console.log(list)
-
-  nav.appendChild(list);
 
   return nav;
 }

@@ -33,9 +33,23 @@ header {
 }
 nav {
   width: 100%;
-  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
-ul {
+nav .nav-btn {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 2px solid transparent;
+}
+nav .nav-btn:hover {
+  border-bottom: 2px solid black;
+}
+/* ul {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -52,12 +66,12 @@ a {
 }
 a:hover {
   border-bottom: 1px solid black;
-}
+} */
 /* Home CSS */
-#home {
+#main {
   height: 100vh;
   width: 100%;
-  /* background-image: linear-gradient(rgba(0 ,0,0,0.4), rgba(0 ,0,0,0.4)), url(); */
+  background-image: linear-gradient(rgba(0 ,0,0,0.4), rgba(0 ,0,0,0.4)), url();
 }
 .description {
   width: 70vw;
