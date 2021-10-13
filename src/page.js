@@ -1,6 +1,4 @@
 import { generateHome } from "./home";
-import { generateMenu } from "./menu";
-import { generateContact } from "./contact";
 import generateFooter from "./footer";
 
 // Generate header
@@ -36,6 +34,7 @@ function generateNav() {
   return nav;
 }
 
+// Initialize webpage by generating header, home, and footer content
 function initializeWebsite() {
   const content = document.querySelector("#content");
   content.prepend(generateHeader());

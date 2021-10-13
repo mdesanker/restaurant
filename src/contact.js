@@ -4,11 +4,11 @@ export function generateContact() {
 
   const phone = document.createElement("p");
   phone.id = "phone";
-  phone.textContent = "847-123-5555";
+  phone.innerHTML = "&#128222 847-123-5555";
 
   const address = document.createElement("p");
   address.id = "address";
-  address.textContent = "777 Nondescript Way";
+  address.innerHTML = "&#127968 777 Nondescript Way";
 
   const map = document.createElement("div");
   map.id = "map";
