@@ -1,6 +1,7 @@
 import { generateHome } from "./home";
 import { generateMenu } from "./menu";
 import { generateContact } from "./contact";
+import generateFooter from "./footer";
 
 // Generate header
 function generateHeader() {
@@ -20,23 +21,27 @@ function generateHeader() {
 function generateNav() {
   const nav = document.createElement("nav");
 
-  const navList = ["home", "menu", "contact"];
+  const navList = ["Home", "Menu", "Contact"];
 
   navList.forEach((item) => {
     const button = document.createElement("button");
     button.classList.add("nav-btn");
     button.textContent = item;
-    button.id = `${item}Btn`;
+    button.dataset.id = item;
     button.setAttribute("type", "button");
 
-    // Add eventListener to each button
-    button.addEventListener("click", function (e) {
-      // Doesn't do anything yet
-      console.log(e.target.id);
-    });
+    console.log(button);
+
+    // // Add eventListener to each button
+    // button.addEventListener("click", function (e) {
+    //   // Doesn't do anything yet
+    //   console.log(e.target.id);
+    // });
 
     nav.append(button);
   });
+
+  // nav.addEventListener("click");
 
   return nav;
 }
@@ -44,9 +49,10 @@ function generateNav() {
 function initializeWebsite() {
   const content = document.querySelector("#content");
   content.prepend(generateHeader());
-  // content.appendChild(generateHome());
+  content.appendChild(generateHome());
   // content.appendChild(generateMenu());
   // content.appendChild(generateContact());
+  content.appendChild(generateFooter());
 }
 
-export { initializeWebsite };
+export { initializeWebsite, generateHeader };
