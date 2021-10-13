@@ -1,5 +1,6 @@
 import { generateHome } from "./home";
 import { generateMenu } from "./menu";
+import { generateContact } from "./contact";
 
 // Generate header
 function generateHeader() {
@@ -45,6 +46,7 @@ function initializeWebsite() {
   content.prepend(generateHeader());
   // content.appendChild(generateHome());
   // content.appendChild(generateMenu());
+  content.appendChild(generateContact());
 }
 
 export { initializeWebsite };
