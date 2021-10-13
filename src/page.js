@@ -1,4 +1,5 @@
 import { generateHome } from "./home";
+import { generateMenu } from "./menu";
 
 // Generate header
 function generateHeader() {
@@ -43,6 +44,7 @@ function initializeWebsite() {
   const content = document.querySelector("#content");
   content.prepend(generateHeader());
   // content.appendChild(generateHome());
+  content.appendChild(generateMenu());
 }
 
 export { initializeWebsite };
