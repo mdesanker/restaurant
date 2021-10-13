@@ -120,6 +120,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"generateContact\": () => (/* binding */ generateContact)\n/* harmony export */ });\nfunction generateContact() {\n  const section = document.createElement(\"section\");\n  section.id = \"contact\";\n\n  const phone = document.createElement(\"p\");\n  phone.id = \"phone\";\n  phone.textContent = \"847-123-5555\";\n\n  const address = document.createElement(\"p\");\n  address.id = \"address\";\n  address.textContent = \"777 Nondescript Way\";\n\n  const map = document.createElement(\"div\");\n  map.id = \"map\";\n\n  section.appendChild(phone);\n  section.appendChild(address);\n  section.appendChild(map);\n\n  return section;\n}\n\n\n//# sourceURL=webpack://restaurant/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -156,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initializeWebsite\": () => (/* binding */ initializeWebsite)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n// Generate header\nfunction generateHeader() {\n  const header = document.createElement(\"header\");\n\n  const name = document.createElement(\"h1\");\n  name.textContent = \"Feast\";\n  name.classList.add(\"name\");\n\n  header.appendChild(name);\n  header.appendChild(generateNav());\n\n  return header;\n}\n\n// Generate navbar\nfunction generateNav() {\n  const nav = document.createElement(\"nav\");\n\n  const navList = [\"home\", \"menu\", \"contact\"];\n\n  navList.forEach((item) => {\n    const button = document.createElement(\"button\");\n    button.classList.add(\"nav-btn\");\n    button.textContent = item;\n    button.id = `${item}Btn`;\n    button.setAttribute(\"type\", \"button\");\n\n    // Add eventListener to each button\n    button.addEventListener(\"click\", function (e) {\n      // Doesn't do anything yet\n      console.log(e.target.id);\n    });\n\n    nav.append(button);\n  });\n\n  return nav;\n}\n\nfunction initializeWebsite() {\n  const content = document.querySelector(\"#content\");\n  content.prepend(generateHeader());\n  // content.appendChild(generateHome());\n  // content.appendChild(generateMenu());\n}\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initializeWebsite\": () => (/* binding */ initializeWebsite)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\n// Generate header\nfunction generateHeader() {\n  const header = document.createElement(\"header\");\n\n  const name = document.createElement(\"h1\");\n  name.textContent = \"Feast\";\n  name.classList.add(\"name\");\n\n  header.appendChild(name);\n  header.appendChild(generateNav());\n\n  return header;\n}\n\n// Generate navbar\nfunction generateNav() {\n  const nav = document.createElement(\"nav\");\n\n  const navList = [\"home\", \"menu\", \"contact\"];\n\n  navList.forEach((item) => {\n    const button = document.createElement(\"button\");\n    button.classList.add(\"nav-btn\");\n    button.textContent = item;\n    button.id = `${item}Btn`;\n    button.setAttribute(\"type\", \"button\");\n\n    // Add eventListener to each button\n    button.addEventListener(\"click\", function (e) {\n      // Doesn't do anything yet\n      console.log(e.target.id);\n    });\n\n    nav.append(button);\n  });\n\n  return nav;\n}\n\nfunction initializeWebsite() {\n  const content = document.querySelector(\"#content\");\n  content.prepend(generateHeader());\n  // content.appendChild(generateHome());\n  // content.appendChild(generateMenu());\n  content.appendChild((0,_contact__WEBPACK_IMPORTED_MODULE_2__.generateContact)());\n}\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/page.js?");
 
 /***/ }),
 
