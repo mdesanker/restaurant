@@ -1,5 +1,5 @@
 import "./style.css";
-import { initializeWebsite, generateHeader } from "./page";
+import { initializeWebsite } from "./page";
 import { generateHome } from "./home";
 import { generateMenu } from "./menu";
 import { generateContact } from "./contact";
@@ -15,6 +15,11 @@ nav.addEventListener("click", function (e) {
   // Guard function
   if (!clicked) return;
 
+  // Style active nav button
+  const navBtns = document.querySelectorAll("button");
+  navBtns.forEach((btn) => btn.classList.remove("nav-btn_active"));
+  clicked.classList.add("nav-btn_active");
+
   // Clear content div HTML
   const content = document.querySelector("#content");
   const bodySection = document.querySelector("section");
@@ -23,6 +28,7 @@ nav.addEventListener("click", function (e) {
   content.removeChild(bodySection);
   content.removeChild(footer);
 
+  // Determine which tab to generate
   switch (clicked.dataset.id) {
     case "Home":
       content.appendChild(generateHome());

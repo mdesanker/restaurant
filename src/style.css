@@ -35,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
-nav .nav-btn {
+.nav-btn {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -45,27 +45,13 @@ nav .nav-btn {
   margin-bottom: 10px;
   border-bottom: 2px solid transparent;
 }
-nav .nav-btn:hover {
+.nav-btn_active {
+  border-bottom: 2px solid gray;
+}
+.nav-btn:hover,
+.nav-btn_active:hover {
   border-bottom: 2px solid black;
 }
-/* ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: 0.3rem;
-  padding: 10px 30px;
-}
-a:hover {
-  border-bottom: 1px solid black;
-} */
 /* Home CSS */
 #home {
   height: 100vh;

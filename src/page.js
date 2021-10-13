@@ -30,18 +30,8 @@ function generateNav() {
     button.dataset.id = item;
     button.setAttribute("type", "button");
 
-    // console.log(button);
-
-    // // Add eventListener to each button
-    // button.addEventListener("click", function (e) {
-    //   // Doesn't do anything yet
-    //   console.log(e.target.id);
-    // });
-
     nav.append(button);
   });
-
-  // nav.addEventListener("click");
 
   return nav;
 }
@@ -50,9 +40,11 @@ function initializeWebsite() {
   const content = document.querySelector("#content");
   content.prepend(generateHeader());
   content.appendChild(generateHome());
-  // content.appendChild(generateMenu());
-  // content.appendChild(generateContact());
   content.appendChild(generateFooter());
+
+  // Set home button as active on default
+  const activeBtn = document.querySelector('button[data-id="Home"]');
+  activeBtn.classList.add("nav-btn_active");
 }
 
 export { initializeWebsite, generateHeader };
