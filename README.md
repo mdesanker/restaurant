@@ -1,6 +1,6 @@
 Simple website for a fictional restaurant created with HTML, CSS, and Javascript.
 
-Live demo [here]()
+Live demo [here](https://mdesanker.github.io/restaurant/)
 
 All of the page content is generated with JavaScript.
 
