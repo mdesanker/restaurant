@@ -119,3 +119,26 @@ a:hover {
   letter-spacing: 0.1rem;
   color: gray;
 }
+/* Contact CSS */
+#contact {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 200px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#contact p {
+  padding: 10px;
+  font-size: 18px;
+}
+#map {
+  background-image: url(./images/map.png);
+  border: thin solid gray;
+  height: 300px;
+  width: 400px;
+  margin: 30px;
+}

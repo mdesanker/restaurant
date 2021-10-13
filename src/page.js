@@ -44,7 +44,7 @@ function initializeWebsite() {
   const content = document.querySelector("#content");
   content.prepend(generateHeader());
   // content.appendChild(generateHome());
-  content.appendChild(generateMenu());
+  // content.appendChild(generateMenu());
 }
 
 export { initializeWebsite };
