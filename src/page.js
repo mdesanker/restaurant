@@ -30,7 +30,7 @@ function generateNav() {
     button.dataset.id = item;
     button.setAttribute("type", "button");
 
-    console.log(button);
+    // console.log(button);
 
     // // Add eventListener to each button
     // button.addEventListener("click", function (e) {
